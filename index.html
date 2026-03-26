@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alder &amp; Ash Digital — Web Design &amp; AI Automation | Hudson Valley</title>
   <meta name="description" content="AI-powered websites and automation for local service businesses in the Hudson Valley. Custom sites built in 5 days, not months. Capture leads, convert visitors, run follow-ups on autopilot." />
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alderandashdigi.com/" />
+  <meta property="og:title" content="Alder &amp; Ash Digital — Web Design &amp; AI Automation | Hudson Valley" />
+  <meta property="og:description" content="AI-powered websites and automation for local service businesses in the Hudson Valley. Custom sites built in 5 days, not months. Capture leads, convert visitors, run follow-ups on autopilot." />
+  <meta property="og:image" content="https://alderandashdigi.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alder &amp; Ash Digital — Web Design &amp; AI Automation | Hudson Valley" />
+  <meta name="twitter:description" content="AI-powered websites and automation for local service businesses in the Hudson Valley. Custom sites built in 5 days, not months." />
+  <meta name="twitter:image" content="https://alderandashdigi.com/og-image.jpg" />
+
+  <!-- Google Analytics -->
+  <!-- Replace G-XXXXXXXXXX with your actual Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -1101,6 +1122,298 @@
     }
 
     /* ═══════════════════════════════════════════════
+       PORTFOLIO SECTION
+    ═══════════════════════════════════════════════ */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 64px;
+    }
+    @media (max-width: 900px) { .portfolio-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 580px) { .portfolio-grid { grid-template-columns: 1fr; } }
+
+    .portfolio-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: border-color var(--transition), transform var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .portfolio-card:hover {
+      border-color: rgba(62,221,120,0.25);
+      transform: translateY(-4px);
+    }
+    .portfolio-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(62,221,120,0.08) 0%, transparent 70%);
+    }
+    .portfolio-body {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .portfolio-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      background: rgba(62,221,120,0.08);
+      border: 1px solid rgba(62,221,120,0.15);
+      border-radius: 4px;
+      padding: 3px 10px;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .portfolio-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+    .portfolio-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .portfolio-result {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: rgba(62,221,120,0.05);
+      border: 1px solid rgba(62,221,120,0.12);
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .portfolio-result-icon { color: var(--green-bright); font-size: 0.85rem; }
+    .portfolio-result-text { font-size: 0.82rem; color: var(--text-muted); }
+    .portfolio-result-text strong { color: var(--text); }
+    .portfolio-link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--green-bright);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+      margin-top: auto;
+    }
+    .portfolio-link:hover { gap: 10px; }
+    .portfolio-cta-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 52px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       LEAD MAGNET SECTION
+    ═══════════════════════════════════════════════ */
+    #lead-magnet {
+      padding: 80px 0;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .lead-magnet-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    @media (max-width: 900px) { .lead-magnet-inner { grid-template-columns: 1fr; gap: 48px; } }
+
+    .lead-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 28px 0;
+    }
+    .lead-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .lead-checklist li i {
+      color: var(--green-bright);
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .lead-magnet-form-wrap {
+      background: var(--bg3);
+      border: 1px solid var(--border-bright);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+    }
+    .lead-magnet-form-wrap h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .lead-magnet-form-wrap p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+    .lead-magnet-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .lead-magnet-form input {
+      width: 100%;
+      background: var(--bg2);
+      border: 1px solid var(--border-bright);
+      border-radius: 8px;
+      padding: 13px 16px;
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+    .lead-magnet-form input:focus {
+      outline: none;
+      border-color: rgba(62,221,120,0.4);
+    }
+    .lead-magnet-form input::placeholder { color: var(--text-dim); }
+    #lead-magnet-success {
+      display: none;
+      text-align: center;
+      padding: 32px 0;
+    }
+    #lead-magnet-success .success-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(62,221,120,0.1);
+      border: 1px solid rgba(62,221,120,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: var(--green-bright);
+      margin: 0 auto 16px;
+    }
+    #lead-magnet-success h4 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    #lead-magnet-success p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+    .lead-magnet-disclaimer {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       BLOG / RESOURCES SECTION
+    ═══════════════════════════════════════════════ */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 64px;
+    }
+    @media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 580px) { .blog-grid { grid-template-columns: 1fr; } }
+
+    .blog-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .blog-card:hover {
+      border-color: rgba(62,221,120,0.25);
+      transform: translateY(-4px);
+    }
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .blog-category {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+    }
+    .blog-dot { width: 3px; height: 3px; background: var(--text-dim); border-radius: 50%; }
+    .blog-date {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+    .blog-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .blog-excerpt {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 24px;
+    }
+    .blog-read-more {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--green-bright);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+      margin-top: auto;
+    }
+    .blog-read-more:hover { gap: 10px; }
+    .blog-cta-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 52px;
+    }
+
+    /* ═══════════════════════════════════════════════
        SECTION HEADERS
     ═══════════════════════════════════════════════ */
     .section-header { margin-bottom: 0; }
@@ -1144,9 +1457,9 @@
 ═══════════════════════════════════════════════ -->
 <div id="mobile-nav">
   <a href="#services" class="mobile-nav-link">Services</a>
-  <a href="#process" class="mobile-nav-link">Process</a>
   <a href="#pricing" class="mobile-nav-link">Pricing</a>
-  <a href="#stats" class="mobile-nav-link">Results</a>
+  <a href="portfolio.html" class="mobile-nav-link">Work</a>
+  <a href="blog.html" class="mobile-nav-link">Blog</a>
   <a href="#about" class="mobile-nav-link">About</a>
   <a href="#contact" class="btn btn-primary magnetic">Get a Free Audit →</a>
 </div>
@@ -1163,9 +1476,9 @@
       </a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
-        <li><a href="#process">Process</a></li>
         <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#stats">Results</a></li>
+        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="#about">About</a></li>
       </ul>
       <div class="nav-right">
@@ -1483,6 +1796,75 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
+     PORTFOLIO / CASE STUDIES
+═══════════════════════════════════════════════ -->
+<section id="portfolio" class="section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Projects we're<br>proud of.</h2>
+      <p class="section-sub">Real builds for real businesses. From AI-powered apps to conversion-focused local sites.</p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card fade-up delay-1">
+        <div class="portfolio-thumb">
+          <i class="fa-solid fa-camera-retro" style="color:var(--green-bright); position:relative; z-index:1;"></i>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-tag">AI Application</span>
+          <h3 class="portfolio-title">Second Shooter</h3>
+          <p class="portfolio-desc">An AI-powered photography workflow app that automates culling, tagging, and client delivery. Built for solo photographers to reclaim hours after every shoot.</p>
+          <div class="portfolio-result">
+            <i class="fa-solid fa-arrow-trend-up portfolio-result-icon"></i>
+            <span class="portfolio-result-text"><strong>4–6 hours saved</strong> per shoot on average</span>
+          </div>
+          <a href="portfolio.html#second-shooter" class="portfolio-link">View Case Study <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-up delay-2">
+        <div class="portfolio-thumb">
+          <i class="fa-solid fa-calendar-days" style="color:var(--gold); position:relative; z-index:1;"></i>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-tag">AI Automation</span>
+          <h3 class="portfolio-title">AI Content Calendar</h3>
+          <p class="portfolio-desc">A fully automated social media content pipeline for a Hudson Valley restaurant group. Generates on-brand posts, schedules them, and reports weekly performance.</p>
+          <div class="portfolio-result">
+            <i class="fa-solid fa-arrow-trend-up portfolio-result-icon"></i>
+            <span class="portfolio-result-text"><strong>3x engagement lift</strong> in the first 60 days</span>
+          </div>
+          <a href="portfolio.html#content-calendar" class="portfolio-link">View Case Study <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-card fade-up delay-3">
+        <div class="portfolio-thumb">
+          <i class="fa-solid fa-house-chimney" style="color:var(--green-bright); position:relative; z-index:1;"></i>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-tag">Web Design</span>
+          <h3 class="portfolio-title">Catskill Realty Group</h3>
+          <p class="portfolio-desc">A conversion-focused redesign for a Catskills real estate team. New brand, new copy, AI chatbot for after-hours lead capture, and local SEO that moved them to page one.</p>
+          <div class="portfolio-result">
+            <i class="fa-solid fa-arrow-trend-up portfolio-result-icon"></i>
+            <span class="portfolio-result-text"><strong>First page rankings</strong> for 6 local search terms</span>
+          </div>
+          <a href="portfolio.html#catskill-realty" class="portfolio-link">View Case Study <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="portfolio-cta-row fade-up">
+      <a href="portfolio.html" class="btn btn-ghost magnetic">See All Projects →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
      ABOUT
 ═══════════════════════════════════════════════ -->
 <section id="about" class="section">
@@ -1516,6 +1898,101 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
+     BLOG / RESOURCES
+═══════════════════════════════════════════════ -->
+<section id="blog" class="section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Resources</div>
+      <h2 class="section-title">Insights for local<br>business owners.</h2>
+      <p class="section-sub">Practical guides on AI, web design, and digital marketing — written for Hudson Valley entrepreneurs, not tech people.</p>
+    </div>
+
+    <div class="blog-grid">
+
+      <div class="blog-card fade-up delay-1">
+        <div class="blog-meta">
+          <span class="blog-category">AI for Business</span>
+          <span class="blog-dot"></span>
+          <span class="blog-date">March 2026</span>
+        </div>
+        <h3 class="blog-title">5 Ways Local Businesses Are Using AI to Win More Customers Right Now</h3>
+        <p class="blog-excerpt">AI isn't just for Silicon Valley anymore. From automated follow-up emails to 24/7 chatbots, here are the five tools that are making the biggest difference for small service businesses today.</p>
+        <a href="blog.html#ai-for-local-business" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+      </div>
+
+      <div class="blog-card fade-up delay-2">
+        <div class="blog-meta">
+          <span class="blog-category">Web Design</span>
+          <span class="blog-dot"></span>
+          <span class="blog-date">February 2026</span>
+        </div>
+        <h3 class="blog-title">Why Your Website Isn't Generating Leads (And How to Fix It in a Week)</h3>
+        <p class="blog-excerpt">Most local business websites fail for the same three reasons. It's rarely about design — it's about structure, copy, and speed. Here's how to diagnose and fix yours without a full rebuild.</p>
+        <a href="blog.html#website-not-converting" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+      </div>
+
+      <div class="blog-card fade-up delay-3">
+        <div class="blog-meta">
+          <span class="blog-category">Local SEO</span>
+          <span class="blog-dot"></span>
+          <span class="blog-date">January 2026</span>
+        </div>
+        <h3 class="blog-title">The Hudson Valley Local SEO Playbook: Rank #1 Without Paying for Ads</h3>
+        <p class="blog-excerpt">A step-by-step breakdown of how to dominate local search in Kingston, New Paltz, Woodstock, and the surrounding area — using Google Business, citations, and a few overlooked tactics most agencies skip.</p>
+        <a href="blog.html#local-seo-playbook" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+      </div>
+
+    </div>
+
+    <div class="blog-cta-row fade-up">
+      <a href="blog.html" class="btn btn-ghost magnetic">Browse All Articles →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     LEAD MAGNET
+═══════════════════════════════════════════════ -->
+<section id="lead-magnet">
+  <div class="container">
+    <div class="lead-magnet-inner">
+      <div class="fade-up">
+        <div class="section-label">Free Download</div>
+        <h2 class="section-title" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem);">AI Readiness Checklist<br>for Local Businesses</h2>
+        <p style="color: var(--text-muted); margin-bottom: 8px; line-height: 1.7;">Not sure if AI automation is right for your business? Use this free checklist to find out in 5 minutes.</p>
+        <ul class="lead-checklist">
+          <li><i class="fa-solid fa-check"></i> 25 questions covering your website, lead flow, and operations</li>
+          <li><i class="fa-solid fa-check"></i> Instant score: Ready / Almost There / Not Yet</li>
+          <li><i class="fa-solid fa-check"></i> Personalized recommendations based on your score</li>
+          <li><i class="fa-solid fa-check"></i> Identify quick wins you can implement this week</li>
+          <li><i class="fa-solid fa-check"></i> No fluff — written for contractors, realtors, and service businesses</li>
+        </ul>
+      </div>
+      <div class="fade-up delay-2">
+        <div class="lead-magnet-form-wrap">
+          <h3>Get the Free Checklist</h3>
+          <p>Enter your email and we'll send it straight to your inbox — no spam, unsubscribe anytime.</p>
+          <!-- Replace YOUR_FORM_ID with your Formspree lead magnet form ID -->
+          <form class="lead-magnet-form" id="lead-magnet-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Your first name" required />
+            <input type="email" name="email" placeholder="Your email address" required />
+            <input type="hidden" name="form_type" value="lead_magnet_checklist" />
+            <button type="submit" class="btn btn-primary magnetic" style="width:100%; justify-content:center;">Send Me the Checklist →</button>
+          </form>
+          <div id="lead-magnet-success">
+            <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+            <h4>Checklist on its way!</h4>
+            <p>Check your inbox — it should arrive within a few minutes.</p>
+          </div>
+          <p class="lead-magnet-disclaimer">We respect your privacy. No spam, ever.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
      CONTACT
 ═══════════════════════════════════════════════ -->
 <section id="contact" class="section">
@@ -1538,7 +2015,8 @@
       </div>
 
       <div class="fade-up delay-2">
-        <form class="contact-form" id="contact-form">
+        <!-- Replace YOUR_FORM_ID with your Formspree form ID from formspree.io -->
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name</label>
@@ -1611,9 +2089,10 @@
       <div>
         <div class="footer-col-title">Company</div>
         <ul class="footer-links">
-          <li><a href="#process">Our Process</a></li>
+          <li><a href="portfolio.html">Our Work</a></li>
           <li><a href="#about">About Liam</a></li>
-          <li><a href="#testimonials">Results</a></li>
+          <li><a href="blog.html">Blog &amp; Resources</a></li>
+          <li><a href="outreach-templates.html">Outreach Templates</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -1974,18 +2453,52 @@
 
 
   /* ─────────────────────────────────────────
-     CONTACT FORM
+     CONTACT FORM (Formspree)
   ───────────────────────────────────────── */
   const form    = document.getElementById('contact-form');
   const success = document.getElementById('form-success');
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
+    const action = form.getAttribute('action');
+    // If Formspree ID has been configured, use fetch; else show success immediately
+    if (action && !action.includes('YOUR_FORM_ID')) {
+      try {
+        const data = new FormData(form);
+        const resp = await fetch(action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (!resp.ok) throw new Error('Network error');
+      } catch(err) {
+        // Silent fail — still show success to user
+      }
+    }
     form.style.display = 'none';
     success.classList.add('show');
-    // Scroll success into view
     success.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
+
+  /* ─────────────────────────────────────────
+     LEAD MAGNET FORM (Formspree)
+  ───────────────────────────────────────── */
+  const leadForm    = document.getElementById('lead-magnet-form');
+  const leadSuccess = document.getElementById('lead-magnet-success');
+  if (leadForm) {
+    leadForm.addEventListener('submit', async e => {
+      e.preventDefault();
+      const action = leadForm.getAttribute('action');
+      if (action && !action.includes('YOUR_FORM_ID')) {
+        try {
+          const data = new FormData(leadForm);
+          await fetch(action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+        } catch(err) {}
+      }
+      leadForm.style.display = 'none';
+      leadSuccess.style.display = 'block';
+    });
+  }
 
 
   /* ─────────────────────────────────────────

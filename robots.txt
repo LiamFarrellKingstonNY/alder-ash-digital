@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alderandashdigi.com/sitemap.xml
+Sitemap: https://alderandashdigital.com/sitemap.xml

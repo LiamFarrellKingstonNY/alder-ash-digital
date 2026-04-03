@@ -3,19 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hudson Valley Small Business Blog | Web Design &amp; AI Tips | Alder &amp; Ash Digital</title>
-  <meta name="description" content="Practical guides on web design, AI automation, and local SEO for Hudson Valley small businesses in Kingston, Woodstock, New Paltz &amp; the Catskills. Written for business owners, not tech people." />
+  <title>Why Your Website Isn't Generating Leads (And How to Fix It) | Alder &amp; Ash Digital</title>
+  <meta name="description" content="Most local business websites fail for the same three reasons. Here's how to diagnose your site and fix the highest-impact problems without a full rebuild." />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://alderandashdigital.com/blog.html" />
-  <meta property="og:title" content="Blog &amp; Resources — Alder &amp; Ash Digital" />
-  <meta property="og:description" content="Practical guides on AI, web design, and local SEO for Hudson Valley small businesses." />
-  <meta property="og:image" content="https://alderandashdigital.com/og-image.jpg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://alderandashdigi.com/blog/website-not-converting.html" />
+  <meta property="og:title" content="Why Your Website Isn't Generating Leads (And How to Fix It in a Week)" />
+  <meta property="og:description" content="Most local business websites fail for the same three reasons. Here's how to diagnose your site and fix the highest-impact problems without a full rebuild." />
+  <meta property="og:image" content="https://alderandashdigi.com/og-image.jpg" />
 
-  <link rel="canonical" href="https://alderandashdigital.com/blog.html" />
+  <link rel="canonical" href="https://alderandashdigi.com/blog/website-not-converting.html" />
   <meta name="geo.region" content="US-NY" />
   <meta name="geo.placename" content="Kingston, New York" />
+
+  <!-- JSON-LD Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Why Your Website Isn't Generating Leads (And How to Fix It in a Week)",
+    "description": "Most local business websites fail for the same three reasons. It's rarely about design — it's about structure, copy, and speed. Here's how to diagnose your site and fix the highest-impact problems without a full rebuild.",
+    "author": {
+      "@type": "Person",
+      "name": "Liam Farrell",
+      "url": "https://alderandashdigi.com/index.html#about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Alder &amp; Ash Digital",
+      "url": "https://alderandashdigi.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://alderandashdigi.com/og-image.jpg"
+      }
+    },
+    "datePublished": "2026-02-01",
+    "dateModified": "2026-02-01",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://alderandashdigi.com/blog/website-not-converting.html"
+    },
+    "articleSection": "Web Design",
+    "keywords": ["website conversion", "local business website", "Hudson Valley web design", "page speed", "call to action"]
+  }
+  </script>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJECSZBK3S"></script>
@@ -153,60 +185,8 @@
     .page-hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.05; margin-bottom: 20px; }
     .page-hero p { font-size: 1.05rem; color: var(--text-muted); line-height: 1.7; max-width: 520px; }
 
-    /* ARTICLE GRID */
-    .articles-section { padding: 100px 0; }
-
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-bottom: 80px;
-    }
-    @media (max-width:900px) { .articles-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width:580px) { .articles-grid { grid-template-columns: 1fr; } }
-
-    .article-card {
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: border-color var(--transition), transform var(--transition);
-    }
-    .article-card:hover { border-color: rgba(62,221,120,.25); transform: translateY(-4px); }
-
-    .article-card-header {
-      padding: 28px 28px 0;
-    }
-    .article-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-    .article-category { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green-bright); }
-    .meta-dot { width: 3px; height: 3px; background: var(--text-dim); border-radius: 50%; }
-    .article-date { font-size: .75rem; color: var(--text-dim); }
-    .article-read-time { font-size: .75rem; color: var(--text-dim); }
-    .article-title {
-      font-size: 1.15rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.3;
-      margin-bottom: 12px; color: var(--text); text-decoration: none; display: block;
-      transition: color .2s;
-    }
-    .article-title:hover { color: var(--green-bright); }
-
-    .article-card-body { padding: 0 28px 28px; flex: 1; display: flex; flex-direction: column; }
-    .article-excerpt { font-size: .875rem; color: var(--text-muted); line-height: 1.7; flex: 1; margin-bottom: 24px; }
-    .article-read-more {
-      font-size: .875rem; font-weight: 600; color: var(--green-bright);
-      text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
-      transition: gap .2s; margin-top: auto;
-    }
-    .article-read-more:hover { gap: 10px; }
-
     /* FULL ARTICLES */
-    .full-articles { padding-bottom: 100px; }
-    .full-article {
-      border-top: 1px solid var(--border);
-      padding: 80px 0;
-    }
-    .full-article:last-child { border-bottom: 1px solid var(--border); }
+    .full-articles { padding: 100px 0; }
 
     .article-layout {
       display: grid;
@@ -232,10 +212,13 @@
     .article-body ul li::before { content: '→'; color: var(--green-bright); flex-shrink: 0; font-weight: 600; margin-top: 1px; }
     .article-body strong { color: var(--text); font-weight: 600; }
 
-    .article-sidebar {
-      position: sticky;
-      top: 100px;
-    }
+    .article-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .article-category { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green-bright); }
+    .meta-dot { width: 3px; height: 3px; background: var(--text-dim); border-radius: 50%; display: inline-block; }
+    .article-date { font-size: .75rem; color: var(--text-dim); }
+    .article-read-time { font-size: .75rem; color: var(--text-dim); }
+
+    .article-sidebar { position: sticky; top: 100px; }
     .sidebar-card {
       background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; margin-bottom: 20px;
     }
@@ -279,30 +262,30 @@
 <div id="cursor-ring"></div>
 
 <div id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="index.html#services">Services</a>
-  <a href="index.html#pricing">Pricing</a>
-  <a href="portfolio.html">Work</a>
-  <a href="blog.html">Blog</a>
-  <a href="index.html#contact" class="btn btn-primary">Get a Free Audit →</a>
+  <a href="../index.html">Home</a>
+  <a href="../index.html#services">Services</a>
+  <a href="../index.html#pricing">Pricing</a>
+  <a href="../portfolio.html">Work</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../index.html#contact" class="btn btn-primary">Get a Free Audit →</a>
 </div>
 
 <nav id="nav">
   <div class="container">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
+      <a href="../index.html" class="nav-logo">
         <div class="nav-logo-mark">A&A</div>
         <span class="nav-logo-text">Alder &amp; Ash <span>Digital</span></span>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
-        <li><a href="portfolio.html">Work</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
-        <li><a href="index.html#about">About</a></li>
+        <li><a href="../index.html#services">Services</a></li>
+        <li><a href="../index.html#pricing">Pricing</a></li>
+        <li><a href="../portfolio.html">Work</a></li>
+        <li><a href="../blog.html" class="active">Blog</a></li>
+        <li><a href="../index.html#about">About</a></li>
       </ul>
       <div class="nav-right">
-        <a href="index.html#contact" class="btn btn-primary btn-sm">Get a Free Audit →</a>
+        <a href="../index.html#contact" class="btn btn-primary btn-sm">Get a Free Audit →</a>
         <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -314,100 +297,32 @@
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
+    <div style="padding:0 0 24px;">
+      <a href="../blog.html" style="font-size:.8rem;color:var(--text-dim);text-decoration:none;transition:color .2s;">Blog</a>
+      <span style="font-size:.8rem;color:var(--text-dim);margin:0 8px;">/</span>
+      <span style="font-size:.8rem;color:var(--text-dim);">Web Design</span>
+    </div>
     <div class="page-hero-inner">
-      <div class="section-label">Blog &amp; Resources</div>
-      <h1>Insights for<br><em class="serif-italic">local business owners.</em></h1>
-      <p>Practical guides on AI, web design, and digital marketing — written for Hudson Valley entrepreneurs, not tech people.</p>
+      <div class="section-label">Web Design</div>
+      <h1>Why your site isn't<br><em class="serif-italic">generating leads.</em></h1>
+      <p>It's rarely about design. Diagnose the real problems and fix them in a week without a full rebuild.</p>
     </div>
   </div>
 </section>
 
-<!-- FULL ARTICLES -->
+<!-- ARTICLE -->
 <section class="full-articles">
   <div class="container">
-
-    <!-- ARTICLE 01 -->
-    <div class="full-article fade-up" id="ai-for-local-business">
-      <div class="article-number">01</div>
-      <div class="article-layout">
-        <div>
-          <div style="margin-bottom:12px;"><a href="blog/ai-for-local-business.html" style="font-size:.8rem;color:var(--green-bright);text-decoration:none;font-weight:600;">View standalone article →</a></div>
-          <div class="article-meta" style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-            <span class="article-category" style="font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--green-bright);">AI for Business</span>
-            <span class="meta-dot" style="width:3px;height:3px;background:var(--text-dim);border-radius:50%;display:inline-block;"></span>
-            <span class="article-date" style="font-size:.75rem;color:var(--text-dim);">March 2026</span>
-            <span class="meta-dot" style="width:3px;height:3px;background:var(--text-dim);border-radius:50%;display:inline-block;"></span>
-            <span class="article-read-time" style="font-size:.75rem;color:var(--text-dim);">7 min read</span>
-          </div>
-          <span class="article-tag">AI for Business</span>
-          <h2>5 Ways Local Businesses Are Using AI to Win More Customers Right Now</h2>
-
-          <div class="article-body">
-            <p>AI isn't just for Silicon Valley startups anymore. The same tools that Fortune 500 companies use to automate their customer acquisition are now accessible to any local service business — at a fraction of the cost.</p>
-
-            <p>Here are the five applications that are generating the most impact for small businesses right now, in order of ease of implementation.</p>
-
-            <h3>1. After-Hours Lead Capture Chatbots</h3>
-            <p>Most service business leads go cold because they're generated after hours — when you're busy doing actual work. An AI chatbot on your website captures those leads, asks qualifying questions, collects contact info, and sends you a summary text so you can follow up first thing in the morning.</p>
-            <p>One Kingston HVAC contractor we worked with went from missing 3–4 emergency jobs per week to capturing almost all of them. The chatbot pays for itself in the first month.</p>
-
-            <h3>2. Automated Follow-Up Sequences</h3>
-            <p>The fastest way to double your closing rate costs nothing extra — it's just following up. Studies consistently show that 80% of sales require 5+ follow-ups, yet most service businesses stop after one.</p>
-            <p>AI can automate this entire sequence: an immediate response, a follow-up the next morning, a check-in three days later, and a final "door still open" message a week out. All personalized, all automatic, all on your behalf.</p>
-
-            <h3>3. Google Business Auto-Responder</h3>
-            <p>Responding to Google reviews within 24 hours is one of the highest-leverage SEO moves available to local businesses. AI can draft responses to every review — positive or negative — that you can approve with one tap.</p>
-
-            <h3>4. Social Content Generation</h3>
-            <p>Consistency on social media is what builds trust over time. But most business owners don't have the time or energy to post regularly. AI content pipelines can generate a month's worth of on-brand posts from your existing materials (menu, portfolio, past projects) in under an hour.</p>
-
-            <h3>5. Appointment Reminders and Pre-Qualification</h3>
-            <p>No-shows cost service businesses thousands per year. AI-powered booking systems send automatic reminders, confirm appointments, and ask pre-qualifying questions that help you prepare — or identify no-hopers before they waste a slot.</p>
-
-            <ul>
-              <li><strong>Bottom line:</strong> You don't need a tech team or a big budget to use these tools effectively.</li>
-              <li>Most can be set up in a few days and run largely on autopilot once configured.</li>
-              <li>The best place to start is wherever you're losing the most time or revenue right now.</li>
-            </ul>
-          </div>
-
-          <div style="margin-top:36px;">
-            <a href="index.html#contact" class="btn btn-primary">Get AI Set Up for My Business →</a>
-          </div>
-        </div>
-
-        <div class="article-sidebar">
-          <div class="sidebar-card">
-            <h4>In This Article</h4>
-            <ul class="toc-list">
-              <li><a href="#ai-for-local-business">After-Hours Chatbots</a></li>
-              <li><a href="#ai-for-local-business">Automated Follow-Ups</a></li>
-              <li><a href="#ai-for-local-business">Google Review Responses</a></li>
-              <li><a href="#ai-for-local-business">Social Content</a></li>
-              <li><a href="#ai-for-local-business">Appointment Systems</a></li>
-            </ul>
-          </div>
-          <div class="sidebar-card">
-            <h4>Free Resource</h4>
-            <p>Not sure if AI is right for your business? Download the free AI Readiness Checklist.</p>
-            <a href="index.html#lead-magnet" class="btn btn-ghost btn-sm" style="width:100%; justify-content:center;">Get the Checklist →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ARTICLE 02 -->
-    <div class="full-article fade-up" id="website-not-converting">
+    <div class="fade-up" id="website-not-converting">
       <div class="article-number">02</div>
       <div class="article-layout">
         <div>
-          <div style="margin-bottom:12px;"><a href="blog/website-not-converting.html" style="font-size:.8rem;color:var(--green-bright);text-decoration:none;font-weight:600;">View standalone article →</a></div>
-          <div class="article-meta" style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-            <span class="article-category" style="font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--green-bright);">Web Design</span>
-            <span class="meta-dot" style="width:3px;height:3px;background:var(--text-dim);border-radius:50%;display:inline-block;"></span>
-            <span class="article-date" style="font-size:.75rem;color:var(--text-dim);">February 2026</span>
-            <span class="meta-dot" style="width:3px;height:3px;background:var(--text-dim);border-radius:50%;display:inline-block;"></span>
-            <span class="article-read-time" style="font-size:.75rem;color:var(--text-dim);">8 min read</span>
+          <div class="article-meta">
+            <span class="article-category">Web Design</span>
+            <span class="meta-dot"></span>
+            <span class="article-date">February 2026</span>
+            <span class="meta-dot"></span>
+            <span class="article-read-time">8 min read</span>
           </div>
           <span class="article-tag">Web Design</span>
           <h2>Why Your Website Isn't Generating Leads (And How to Fix It in a Week)</h2>
@@ -441,7 +356,7 @@
           </div>
 
           <div style="margin-top:36px;">
-            <a href="index.html#contact" class="btn btn-primary">Get a Free Website Audit →</a>
+            <a href="../index.html#contact" class="btn btn-primary">Get a Free Website Audit →</a>
           </div>
         </div>
 
@@ -458,92 +373,18 @@
           <div class="sidebar-card">
             <h4>Not Sure Where to Start?</h4>
             <p>We'll audit your site for free — no commitment, no pitch. Just an honest assessment and a prioritized list of fixes.</p>
-            <a href="index.html#contact" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">Get My Free Audit →</a>
+            <a href="../index.html#contact" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">Get My Free Audit →</a>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ARTICLE 03 -->
-    <div class="full-article fade-up" id="local-seo-playbook">
-      <div class="article-number">03</div>
-      <div class="article-layout">
-        <div>
-          <div style="margin-bottom:12px;"><a href="blog/local-seo-playbook.html" style="font-size:.8rem;color:var(--green-bright);text-decoration:none;font-weight:600;">View standalone article →</a></div>
-          <div class="article-meta" style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-            <span class="article-category" style="font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--green-bright);">Local SEO</span>
-            <span class="meta-dot" style="width:3px;height:3px;background:var(--text-dim);border-radius:50%;display:inline-block;"></span>
-            <span class="article-date" style="font-size:.75rem;color:var(--text-dim);">January 2026</span>
-            <span class="meta-dot" style="width:3px;height:3px;background:var(--text-dim);border-radius:50%;display:inline-block;"></span>
-            <span class="article-read-time" style="font-size:.75rem;color:var(--text-dim);">10 min read</span>
-          </div>
-          <span class="article-tag">Local SEO</span>
-          <h2>The Hudson Valley Local SEO Playbook: Rank #1 Without Paying for Ads</h2>
-
-          <div class="article-body">
-            <p>Google Ads get expensive fast. But for most local service businesses in the Hudson Valley — whether you're in Kingston, Woodstock, New Paltz, Rhinebeck, Saugerties, or Beacon — organic local SEO is still the highest-ROI marketing channel available — if you do it right.</p>
-
-            <p>Here's the full playbook, in the order I'd implement it for a new client starting from scratch.</p>
-
-            <h3>Step 1: Claim and Optimize Your Google Business Profile</h3>
-            <p>Your Google Business Profile (GBP) is the single most powerful local SEO asset you have. It's what shows up in the map pack — the three listings that appear at the top of local searches, above all the organic results.</p>
-            <ul>
-              <li>Claim your profile at business.google.com if you haven't already</li>
-              <li>Fill out every single field — incomplete profiles rank lower</li>
-              <li>Upload at least 10 high-quality photos (interior, exterior, work examples, team)</li>
-              <li>Set your service area to all towns you serve, not just your city</li>
-              <li>Enable messaging so leads can contact you directly from Google</li>
-            </ul>
-
-            <h3>Step 2: Get Your Citations Consistent</h3>
-            <p>A "citation" is any mention of your business name, address, and phone number (NAP) online — Yelp, Angie's List, Yellow Pages, Facebook, etc. Google uses these to verify that your business is real and to determine where you rank.</p>
-            <p>The problem: if your address is listed differently across directories (suite number missing, phone format different), it creates conflicting signals that hurt your rankings. An audit and cleanup of your citations can produce noticeable ranking improvements within 30–60 days.</p>
-
-            <h3>Step 3: Build Location-Specific Pages</h3>
-            <p>If you serve Kingston, Woodstock, New Paltz, Rhinebeck, Saugerties, and Beacon, you should have a separate page targeting each location. "HVAC repair Kingston NY" and "HVAC repair Woodstock NY" are different search terms, and a single homepage can't rank well for both. For businesses covering all of Ulster County, Dutchess County, or the Catskills region, location-specific pages are even more essential.</p>
-            <p>Each location page should mention: the town name in the headline and body, any local landmarks or neighborhoods, a local testimonial if possible, and a clear CTA to call or book.</p>
-
-            <h3>Step 4: Build Reviews Systematically</h3>
-            <p>The map pack is heavily influenced by review count and rating. Businesses with 50+ recent reviews consistently outrank those with 10, even when the 10 are all five stars.</p>
-            <p>The easiest review strategy: after every completed job, send a text with a direct link to your Google review page. Keep it short: "Thanks for having us — if you have 60 seconds, a Google review would mean the world. Here's the link: [link]". Response rates are typically 20–35%.</p>
-
-            <h3>Step 5: Publish Local Content Consistently</h3>
-            <p>Google rewards sites that are actively maintained and topically relevant. Publishing one blog post or service page per month — targeting local search terms your customers are actually using — compounds over time into significant organic traffic.</p>
-            <ul>
-              <li>Target questions your customers actually ask: "how much does it cost to reroof a house in Kingston NY"</li>
-              <li>Include the city name naturally in the content, title, and meta description</li>
-              <li>Link your location pages together and from your homepage</li>
-              <li>Don't keyword-stuff — write for humans, with the search term in mind</li>
-            </ul>
-
-            <p><strong>Timeline expectation:</strong> Local SEO is not an overnight play. Expect 60–90 days to see meaningful movement for most searches. But unlike ads, the results compound — and once you're on page one, you tend to stay there.</p>
-          </div>
-
-          <div style="margin-top:36px;">
-            <a href="index.html#contact" class="btn btn-primary">Get Local SEO Started →</a>
-          </div>
-        </div>
-
-        <div class="article-sidebar">
           <div class="sidebar-card">
-            <h4>The Playbook</h4>
+            <h4>More Articles</h4>
             <ul class="toc-list">
-              <li><a href="#local-seo-playbook">Google Business Profile</a></li>
-              <li><a href="#local-seo-playbook">Citation Cleanup</a></li>
-              <li><a href="#local-seo-playbook">Location Pages</a></li>
-              <li><a href="#local-seo-playbook">Review Strategy</a></li>
-              <li><a href="#local-seo-playbook">Local Content</a></li>
+              <li><a href="ai-for-local-business.html">5 AI Tools for Local Business</a></li>
+              <li><a href="local-seo-playbook.html">Hudson Valley SEO Playbook</a></li>
             </ul>
-          </div>
-          <div class="sidebar-card">
-            <h4>We Do This for You</h4>
-            <p>Local SEO is included in our Growth System package and available as a monthly retainer add-on.</p>
-            <a href="index.html#pricing" class="btn btn-ghost btn-sm" style="width:100%; justify-content:center;">See Pricing →</a>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -557,8 +398,8 @@
         <p>We implement everything in this blog for Hudson Valley businesses — fast, affordably, and without the agency runaround.</p>
       </div>
       <div class="cta-actions">
-        <a href="index.html#contact" class="btn btn-primary">Get a Free Audit →</a>
-        <a href="portfolio.html" class="btn btn-ghost">See Our Work</a>
+        <a href="../index.html#contact" class="btn btn-primary">Get a Free Audit →</a>
+        <a href="../portfolio.html" class="btn btn-ghost">See Our Work</a>
       </div>
     </div>
   </div>
@@ -569,43 +410,43 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a href="index.html" class="nav-logo" style="margin-bottom:0;">
+        <a href="../index.html" class="nav-logo" style="margin-bottom:0;">
           <div class="nav-logo-mark">A&A</div>
           <span class="nav-logo-text">Alder &amp; Ash <span>Digital</span></span>
         </a>
         <p class="footer-brand-desc">AI-powered websites and automation for local service businesses in the Hudson Valley. Built to convert, not just look pretty.</p>
-        <a href="index.html#contact" class="btn btn-primary btn-sm">Get a Free Audit →</a>
+        <a href="../index.html#contact" class="btn btn-primary btn-sm">Get a Free Audit →</a>
       </div>
       <div>
         <div class="footer-col-title">Services</div>
         <ul class="footer-links">
-          <li><a href="index.html#services">Custom Web Design</a></li>
-          <li><a href="index.html#services">AI Automation Systems</a></li>
-          <li><a href="index.html#services">Local SEO &amp; Visibility</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="../index.html#services">Custom Web Design</a></li>
+          <li><a href="../index.html#services">AI Automation Systems</a></li>
+          <li><a href="../index.html#services">Local SEO &amp; Visibility</a></li>
+          <li><a href="../index.html#pricing">Pricing</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-title">Company</div>
         <ul class="footer-links">
-          <li><a href="portfolio.html">Our Work</a></li>
-          <li><a href="index.html#about">About Liam</a></li>
-          <li><a href="blog.html">Blog &amp; Resources</a></li>
-          <li><a href="outreach-templates.html">Outreach Templates</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="../portfolio.html">Our Work</a></li>
+          <li><a href="../index.html#about">About Liam</a></li>
+          <li><a href="../blog.html">Blog &amp; Resources</a></li>
+          <li><a href="../outreach-templates.html">Outreach Templates</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-title">Serving</div>
         <ul class="footer-links">
-          <li><a href="index.html#contact">Kingston, NY</a></li>
-          <li><a href="index.html#contact">Woodstock, NY</a></li>
-          <li><a href="index.html#contact">New Paltz, NY</a></li>
-          <li><a href="index.html#contact">Rhinebeck, NY</a></li>
-          <li><a href="index.html#contact">Saugerties, NY</a></li>
-          <li><a href="index.html#contact">Beacon, NY</a></li>
-          <li><a href="index.html#contact">Hudson, NY</a></li>
-          <li><a href="index.html#contact">Ulster &amp; Dutchess County</a></li>
+          <li><a href="../index.html#contact">Kingston, NY</a></li>
+          <li><a href="../index.html#contact">Woodstock, NY</a></li>
+          <li><a href="../index.html#contact">New Paltz, NY</a></li>
+          <li><a href="../index.html#contact">Rhinebeck, NY</a></li>
+          <li><a href="../index.html#contact">Saugerties, NY</a></li>
+          <li><a href="../index.html#contact">Beacon, NY</a></li>
+          <li><a href="../index.html#contact">Hudson, NY</a></li>
+          <li><a href="../index.html#contact">Ulster &amp; Dutchess County</a></li>
         </ul>
       </div>
     </div>

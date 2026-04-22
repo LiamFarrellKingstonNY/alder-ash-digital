@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJECSZBK3S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VJECSZBK3S');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cold Outreach Templates — Alder &amp; Ash Digital</title>
+  <meta name="description" content="5 battle-tested cold outreach email templates for landing local web design and AI automation clients in the Hudson Valley." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alderandashdigi.com/outreach-templates.html" />
+  <meta property="og:title" content="Cold Outreach Templates — Alder &amp; Ash Digital" />
+  <meta property="og:description" content="5 battle-tested cold outreach email templates for landing local web design and AI automation clients." />
+  <meta property="og:image" content="https://alderandashdigi.com/og-image.jpg" />
+
+  <link rel="canonical" href="https://alderandashdigi.com/outreach-templates.html" />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #060A08;
+      --bg2:          #0C1510;
+      --bg3:          #111E14;
+      --green-bright: #3EDD78;
+      --gold:         #F0A030;
+      --text:         #E8EDE9;
+      --text-muted:   #8A9E8D;
+      --text-dim:     #4A5E4D;
+      --border:       rgba(255,255,255,0.06);
+      --border-bright:rgba(255,255,255,0.12);
+      --radius:       12px;
+      --radius-lg:    20px;
+      --transition:   0.35s cubic-bezier(0.4,0,0.2,1);
+      --mono:         'Courier New', Courier, monospace;
+    }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; cursor: none; }
+    * { cursor: none !important; }
+
+    body {
+      font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Cursor */
+    #cursor-dot { position: fixed; width: 8px; height: 8px; background: var(--green-bright); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: background .2s, transform .1s; }
+    #cursor-ring { position: fixed; width: 40px; height: 40px; border: 1.5px solid var(--green-bright); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: border-color .2s, width .3s cubic-bezier(.4,0,.2,1), height .3s cubic-bezier(.4,0,.2,1), opacity .2s; opacity: .6; }
+    #cursor-dot.hovering { background: var(--gold); transform: translate(-50%,-50%) scale(1.5); }
+    #cursor-ring.hovering { border-color: var(--gold); width: 56px; height: 56px; opacity: .8; }
+    @media (max-width:768px) { #cursor-dot, #cursor-ring { display:none !important; } html,* { cursor:auto !important; } }
+
+    /* Layout */
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-doc { width: 100%; max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+    /* Animations */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity .6s cubic-bezier(.4,0,.2,1), transform .6s cubic-bezier(.4,0,.2,1); }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up.delay-1 { transition-delay: .08s; }
+    .fade-up.delay-2 { transition-delay: .16s; }
+
+    /* Typography */
+    .serif-italic { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; color: var(--green-bright); }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .75rem; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--green-bright); margin-bottom: 16px;
+    }
+    .section-label::before { content: ''; width: 20px; height: 1px; background: var(--green-bright); }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-family: 'Space Grotesk', sans-serif; font-size: .9rem; font-weight: 600; letter-spacing: .01em; text-decoration: none; border: none; transition: var(--transition); position: relative; overflow: hidden; white-space: nowrap; }
+    .btn-primary { background: var(--green-bright); color: #060A08; }
+    .btn-primary::before { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,.15); opacity: 0; transition: opacity .2s; }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border-bright); }
+    .btn-ghost:hover { border-color: rgba(255,255,255,.3); background: rgba(255,255,255,.04); }
+    .btn-sm { padding: 10px 20px; font-size: .82rem; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 20px 0; transition: background .4s, backdrop-filter .4s, padding .4s, border-color .4s; border-bottom: 1px solid transparent; }
+    #nav.scrolled { background: rgba(6,10,8,.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 14px 0; border-bottom-color: var(--border); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-mark { width: 36px; height: 36px; background: var(--green-bright); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .85rem; color: #060A08; letter-spacing: -.02em; flex-shrink: 0; }
+    .nav-logo-text { font-weight: 600; font-size: 1rem; color: var(--text); letter-spacing: -.01em; }
+    .nav-logo-text span { color: var(--text-muted); font-weight: 400; }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-size: .875rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: var(--transition); }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    #mobile-nav { position: fixed; inset: 0; background: var(--bg); z-index: 999; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    #mobile-nav.open { opacity: 1; pointer-events: all; }
+    #mobile-nav a { font-size: 2rem; font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: -.03em; transition: color .2s; }
+    #mobile-nav a:hover { color: var(--green-bright); }
+    @media (max-width:900px) { .nav-links { display: none; } .nav-hamburger { display: flex; } }
+
+    /* PAGE HERO */
+    .page-hero { padding: 140px 0 72px; background: var(--bg2); border-bottom: 1px solid var(--border); }
+    .page-hero-inner { max-width: 680px; }
+    .page-hero h1 { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; margin-bottom: 16px; }
+    .page-hero p { font-size: 1rem; color: var(--text-muted); line-height: 1.7; max-width: 560px; }
+    .page-hero p strong { color: var(--green-bright); font-weight: 600; }
+
+    /* CONTENT BODY */
+    .content-body { padding: 80px 0 120px; }
+
+    /* DIVIDER */
+    .section-divider { border: none; border-top: 1px solid var(--border); margin: 64px 0; }
+
+    /* ── Template Cards ── */
+    .template-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 28px;
+      transition: border-color var(--transition);
+    }
+    .template-card:hover { border-color: var(--border-bright); }
+
+    .card-header {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 28px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .template-number { font-size: .7rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--green-bright); margin-bottom: 4px; }
+    .template-name { font-size: 1.1rem; font-weight: 700; color: var(--text); letter-spacing: -.01em; }
+
+    .best-for { display: flex; flex-wrap: wrap; gap: 6px; align-items: flex-start; padding-top: 4px; }
+    .tag {
+      background: rgba(240,160,48,.06);
+      color: var(--gold);
+      border: 1px solid rgba(240,160,48,.15);
+      border-radius: 5px;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      white-space: nowrap;
+    }
+
+    .card-body { padding: 28px; }
+
+    /* Subject line */
+    .subject-block { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; }
+    .subject-label { font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 5px; }
+    .subject-text { font-family: var(--mono); font-size: 13.5px; color: var(--gold); word-break: break-word; }
+
+    /* Email body */
+    .email-body {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .placeholder { color: var(--green-bright); font-weight: 700; }
+
+    /* CTA + PS */
+    .cta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+    @media (max-width:580px) { .cta-row { grid-template-columns: 1fr; } }
+
+    .mini-block { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; }
+    .mini-label { font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 7px; }
+    .mini-block.cta .mini-label { color: var(--green-bright); }
+    .mini-block.ps  .mini-label { color: var(--gold); }
+    .mini-block p { font-size: .82rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* Notes */
+    .notes-block {
+      background: rgba(62,221,120,.04);
+      border: 1px solid rgba(62,221,120,.1);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+    .notes-label { font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--green-bright); margin-bottom: 7px; }
+    .notes-block p { font-size: .82rem; color: var(--text-muted); line-height: 1.7; }
+    .notes-block em { color: var(--text-dim); font-style: normal; }
+
+    /* Info sections */
+    .info-section { margin-bottom: 60px; }
+
+    .info-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 20px;
+    }
+    .info-card h2 { font-size: 1.2rem; font-weight: 700; letter-spacing: -.02em; margin-bottom: 20px; }
+    .info-card > p { font-size: .875rem; color: var(--text-muted); margin-bottom: 20px; }
+
+    /* Tips list */
+    .tips-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .tips-list li { display: flex; align-items: flex-start; gap: 14px; font-size: .875rem; }
+    .tips-list li i { color: var(--green-bright); flex-shrink: 0; margin-top: 3px; font-size: .75rem; }
+    .tips-list li div { color: var(--text-muted); line-height: 1.65; }
+    .tips-list li strong { color: var(--text); font-weight: 600; display: block; margin-bottom: 3px; }
+    .tips-list li em { color: var(--text-dim); font-style: normal; font-size: .82rem; }
+
+    /* Biz type grid */
+    .biz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .biz-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      transition: border-color var(--transition);
+    }
+    .biz-card:hover { border-color: var(--border-bright); }
+    .biz-name { font-size: .9rem; font-weight: 700; color: var(--text); margin-bottom: 7px; letter-spacing: -.01em; }
+    .biz-pain { font-size: .8rem; color: var(--text-muted); margin-bottom: 10px; line-height: 1.5; }
+    .biz-templates { display: flex; flex-wrap: wrap; gap: 5px; }
+    .t-tag {
+      background: rgba(62,221,120,.07);
+      border: 1px solid rgba(62,221,120,.15);
+      color: var(--green-bright);
+      border-radius: 4px;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+    }
+
+    /* Footer */
+    #footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 64px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--border); }
+    @media (max-width:900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width:540px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand-desc { font-size: .875rem; color: var(--text-muted); line-height: 1.65; margin: 16px 0 24px; max-width: 280px; }
+    .footer-col-title { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: .875rem; color: var(--text-muted); text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-bottom { padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-size: .8rem; color: var(--text-dim); }
+    .footer-socials { display: flex; gap: 16px; }
+    .footer-social-link { width: 36px; height: 36px; background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; font-size: .85rem; transition: background .2s, color .2s, border-color .2s; }
+    .footer-social-link:hover { background: rgba(62,221,120,.08); border-color: rgba(62,221,120,.2); color: var(--green-bright); }
+
+    /* Internal use banner */
+    .internal-banner {
+      background: rgba(240,160,48,.06);
+      border-bottom: 1px solid rgba(240,160,48,.15);
+      padding: 10px 24px;
+      text-align: center;
+      font-size: .75rem;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+  </style>
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<div id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="portfolio.html">Work</a>
+  <a href="blog.html">Blog</a>
+  <a href="index.html#contact" class="btn btn-primary">Get a Free Audit →</a>
+</div>
+
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">A&A</div>
+        <span class="nav-logo-text">Alder &amp; Ash <span>Digital</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#about">About</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="index.html#contact" class="btn btn-primary btn-sm">Get a Free Audit →</a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="internal-banner">
+  <i class="fa-solid fa-lock fa-xs"></i> &nbsp; Internal Resource — Personalize all <strong>[bracketed fields]</strong> before sending
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="section-label">Outreach Playbook</div>
+      <h1>Cold Outreach<br><em class="serif-italic">Templates</em></h1>
+      <p>5 battle-tested email frameworks for landing local web design &amp; AI automation clients in the Hudson Valley. Personalize the <strong>[bracketed fields]</strong> before sending.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<div class="content-body">
+  <div class="container-doc">
+
+    <div class="section-label">Email Templates</div>
+
+
+    <!-- ════════════════════════════════
+         TEMPLATE 01 — WEBSITE AUDIT OFFER
+    ════════════════════════════════ -->
+    <div class="template-card fade-up">
+      <div class="card-header">
+        <div>
+          <div class="template-number">Template 01</div>
+          <div class="template-name">The Website Audit Offer</div>
+        </div>
+        <div class="best-for">
+          <span class="tag">Restaurants</span>
+          <span class="tag">Contractors</span>
+          <span class="tag">Retail</span>
+          <span class="tag">Outdated Sites</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="subject-block">
+          <div class="subject-label">Subject Line</div>
+          <div class="subject-text">Quick note about <span class="placeholder">[Business Name]</span>'s website</div>
+        </div>
+
+        <div class="email-body">Hi <span class="placeholder">[First Name]</span>,
+
+I was looking up <span class="placeholder">[Business Name]</span> online and took a quick look at your website — I noticed a few things that might be quietly costing you customers (slow load time, hard-to-find contact info, not showing up well on mobile).
+
+I put together a free 10-point audit specifically for your site. No strings attached — I just enjoy doing this for local businesses in the Hudson Valley and thought it might be useful.
+
+Would it be alright if I sent it over?
+
+— <span class="placeholder">[Your Name]</span>
+Alder &amp; Ash Digital | Kingston, NY</div>
+
+        <div class="cta-row">
+          <div class="mini-block cta">
+            <div class="mini-label">CTA</div>
+            <p>"Would it be alright if I sent it over?" — low-friction yes/no question.</p>
+          </div>
+          <div class="mini-block ps">
+            <div class="mini-label">P.S.</div>
+            <p>P.S. The audit takes me about 20 minutes — totally free, no sales pitch attached.</p>
+          </div>
+        </div>
+
+        <div class="notes-block">
+          <div class="notes-label"><i class="fa-solid fa-lightbulb fa-xs"></i> &nbsp;When to Use &amp; Notes</div>
+          <p>Best for businesses with visibly outdated sites (pre-2018 design, Flash elements, missing SSL, no mobile layout). Search Google Maps for your target category + "Hudson Valley," check the website link, and send within 24 hours of finding it. Mention one <em>specific</em> flaw you noticed — vague observations get ignored. Works especially well for restaurants, contractors, and local retail shops.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════
+         TEMPLATE 02 — REDESIGN PREVIEW
+    ════════════════════════════════ -->
+    <div class="template-card fade-up delay-1">
+      <div class="card-header">
+        <div>
+          <div class="template-number">Template 02</div>
+          <div class="template-name">The Redesign Preview</div>
+        </div>
+        <div class="best-for">
+          <span class="tag">High-End Prospects</span>
+          <span class="tag">Salons &amp; Spas</span>
+          <span class="tag">Boutiques</span>
+          <span class="tag">Bold Outreach</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="subject-block">
+          <div class="subject-label">Subject Line</div>
+          <div class="subject-text">I made something for <span class="placeholder">[Business Name]</span> (take a look?)</div>
+        </div>
+
+        <div class="email-body">Hi <span class="placeholder">[First Name]</span>,
+
+I'm a web designer based in the Hudson Valley and I had some downtime this week, so I put together a quick mockup of what <span class="placeholder">[Business Name]</span>'s website could look like — modern, fast, and built to convert visitors into customers.
+
+I wasn't asked to do this; I just think your business deserves a site that matches the quality of what you actually offer.
+
+You can see it here: <span class="placeholder">[Link to mockup / Figma / screenshot]</span>
+
+Happy to walk you through it on a quick call if you're curious — no commitment needed.
+
+— <span class="placeholder">[Your Name]</span>
+Alder &amp; Ash Digital | <span class="placeholder">[Phone or Website]</span></div>
+
+        <div class="cta-row">
+          <div class="mini-block cta">
+            <div class="mini-label">CTA</div>
+            <p>"Happy to walk you through it on a quick call if you're curious — no commitment needed."</p>
+          </div>
+          <div class="mini-block ps">
+            <div class="mini-label">P.S.</div>
+            <p>P.S. Even if you're not interested, keep the mockup — it's yours.</p>
+          </div>
+        </div>
+
+        <div class="notes-block">
+          <div class="notes-label"><i class="fa-solid fa-lightbulb fa-xs"></i> &nbsp;When to Use &amp; Notes</div>
+          <p>This is your highest-effort, highest-reward template. Use it for prospects you <em>really</em> want. Build a simple Figma mockup or use a screenshot tool to show a redesigned hero section — even a single page impression works. Works best for aesthetics-forward businesses: salons, boutiques, yoga studios, bed &amp; breakfasts, wineries, and restaurants with strong visual branding. Do not send without an actual mockup — the credibility comes from showing, not telling.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════
+         TEMPLATE 03 — THE AI ANGLE
+    ════════════════════════════════ -->
+    <div class="template-card fade-up">
+      <div class="card-header">
+        <div>
+          <div class="template-number">Template 03</div>
+          <div class="template-name">The AI Angle</div>
+        </div>
+        <div class="best-for">
+          <span class="tag">Service Businesses</span>
+          <span class="tag">Healthcare</span>
+          <span class="tag">Home Services</span>
+          <span class="tag">Booking-Based</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="subject-block">
+          <div class="subject-label">Subject Line</div>
+          <div class="subject-text">After-hours customers and <span class="placeholder">[Business Name]</span></div>
+        </div>
+
+        <div class="email-body">Hi <span class="placeholder">[First Name]</span>,
+
+Did you know that over 60% of people who look up local businesses online do it after hours — when no one's there to answer questions or take a booking?
+
+I help Hudson Valley businesses set up simple AI chat tools that handle those after-hours visitors: answer FAQs, collect leads, and even schedule appointments — automatically, 24/7.
+
+It takes about a week to set up and costs less than a part-time employee's first week.
+
+Worth a 15-minute chat to see if it's a fit for <span class="placeholder">[Business Name]</span>?
+
+— <span class="placeholder">[Your Name]</span>
+Alder &amp; Ash Digital</div>
+
+        <div class="cta-row">
+          <div class="mini-block cta">
+            <div class="mini-label">CTA</div>
+            <p>"Worth a 15-minute chat to see if it's a fit?" — time-boxed, low-pressure ask.</p>
+          </div>
+          <div class="mini-block ps">
+            <div class="mini-label">P.S.</div>
+            <p>P.S. I set one of these up for a Kingston HVAC company last month — they captured 4 new leads in the first week from after-hours visitors alone.</p>
+          </div>
+        </div>
+
+        <div class="notes-block">
+          <div class="notes-label"><i class="fa-solid fa-lightbulb fa-xs"></i> &nbsp;When to Use &amp; Notes</div>
+          <p>Send to businesses that rely on inquiries and bookings: HVAC, plumbers, electricians, therapists, chiropractors, veterinarians, pet groomers, landscapers, and cleaning services. The P.S. is a social proof opportunity — swap in a real result once you have one. If you haven't landed a client yet, remove the P.S. or replace with a local industry stat. Avoid using this for walk-in businesses (coffee shops, retail) where after-hours traffic is less of a pain point.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════
+         TEMPLATE 04 — REFERRAL
+    ════════════════════════════════ -->
+    <div class="template-card fade-up delay-1">
+      <div class="card-header">
+        <div>
+          <div class="template-number">Template 04</div>
+          <div class="template-name">The Referral / Mutual Connection</div>
+        </div>
+        <div class="best-for">
+          <span class="tag">Warm Leads</span>
+          <span class="tag">Chamber Members</span>
+          <span class="tag">Networking Contacts</span>
+          <span class="tag">Any Vertical</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="subject-block">
+          <div class="subject-label">Subject Line</div>
+          <div class="subject-text"><span class="placeholder">[Mutual Contact]</span> suggested I reach out</div>
+        </div>
+
+        <div class="email-body">Hi <span class="placeholder">[First Name]</span>,
+
+I was chatting with <span class="placeholder">[Mutual Contact]</span> recently and they mentioned you might be thinking about refreshing your online presence — so I wanted to reach out directly.
+
+I run Alder &amp; Ash Digital, a web design and AI automation studio here in the Hudson Valley. We work with local businesses to build sites that actually bring in leads and handle customer inquiries automatically.
+
+<span class="placeholder">[Mutual Contact]</span> thought we'd be a good fit, and I think they might be right.
+
+Open to a quick call sometime this week?
+
+— <span class="placeholder">[Your Name]</span>
+Alder &amp; Ash Digital</div>
+
+        <div class="cta-row">
+          <div class="mini-block cta">
+            <div class="mini-label">CTA</div>
+            <p>"Open to a quick call sometime this week?" — casual, conversational, easy to say yes to.</p>
+          </div>
+          <div class="mini-block ps">
+            <div class="mini-label">P.S.</div>
+            <p>P.S. <span class="placeholder">[Mutual Contact]</span> can vouch for my work — feel free to ask them about me before we talk.</p>
+          </div>
+        </div>
+
+        <div class="notes-block">
+          <div class="notes-label"><i class="fa-solid fa-lightbulb fa-xs"></i> &nbsp;When to Use &amp; Notes</div>
+          <p>Only use when you have a genuine mutual connection and have confirmed they're comfortable being name-dropped. Works best after Hudson Valley Chamber of Commerce events, BNI meetings, local networking, or when a current client refers you. The name drop in the subject line dramatically improves open rates. If the mutual contact is also a client, even better — ask them to send a brief intro email first to warm the prospect before you follow up.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════
+         TEMPLATE 05 — FOLLOW-UP
+    ════════════════════════════════ -->
+    <div class="template-card fade-up">
+      <div class="card-header">
+        <div>
+          <div class="template-number">Template 05</div>
+          <div class="template-name">The Gentle Follow-Up</div>
+        </div>
+        <div class="best-for">
+          <span class="tag">No Reply After 5–7 Days</span>
+          <span class="tag">Any Template</span>
+          <span class="tag">One Send Only</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="subject-block">
+          <div class="subject-label">Subject Line</div>
+          <div class="subject-text">Re: <span class="placeholder">[original subject line]</span></div>
+        </div>
+
+        <div class="email-body">Hi <span class="placeholder">[First Name]</span>,
+
+Just wanted to float this back to the top of your inbox — I know things get buried.
+
+No pressure at all. If the timing isn't right or this isn't something you're looking for, just let me know and I'll leave you be.
+
+But if you're even a little bit curious, I'm happy to answer any questions over email or jump on a quick call — whatever's easier.
+
+— <span class="placeholder">[Your Name]</span>
+Alder &amp; Ash Digital</div>
+
+        <div class="cta-row">
+          <div class="mini-block cta">
+            <div class="mini-label">CTA</div>
+            <p>"Happy to answer questions over email or jump on a quick call — whatever's easier."</p>
+          </div>
+          <div class="mini-block ps">
+            <div class="mini-label">P.S.</div>
+            <p>P.S. If the timing is just off right now, I'm happy to check back in a few months — just say the word.</p>
+          </div>
+        </div>
+
+        <div class="notes-block">
+          <div class="notes-label"><i class="fa-solid fa-lightbulb fa-xs"></i> &nbsp;When to Use &amp; Notes</div>
+          <p>Send 5–7 days after the original email if you received no reply. Send <em>once only</em> — two follow-ups comes across as desperate. Reply to the original thread so the context is preserved and the subject line shows "Re:". Giving them an easy out actually increases reply rates by removing pressure. If they reply with "not right now," note the date and set a reminder to re-engage in 60–90 days.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <hr class="section-divider" />
+
+
+    <!-- ════════════════════════════════
+         PERSONALIZATION TIPS
+    ════════════════════════════════ -->
+    <div class="info-section fade-up">
+      <div class="section-label">Personalization</div>
+      <div class="info-card">
+        <h2>Making Every Email Feel 1-of-1</h2>
+        <ul class="tips-list">
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <div>
+              <strong>Use their first name, not the business name, in the greeting.</strong>
+              <em>"Hi Sarah" beats "Hi Main Street Bakery" every time. Find it on LinkedIn, Facebook, or their About page.</em>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <div>
+              <strong>Cite something specific you noticed.</strong>
+              <em>"I noticed your menu PDF hasn't been updated since 2022" or "Your Google listing says you close at 5 but your site says 6" — specificity signals you're a real person, not a spam bot.</em>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <div>
+              <strong>Reference something local.</strong>
+              <em>"I'm based in Kingston" or "I saw you at the Rhinebeck Farmers Market" builds instant rapport with Hudson Valley owners who are wary of out-of-state agencies.</em>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <div>
+              <strong>Mirror their industry language.</strong>
+              <em>A winery wants to hear about "tasting room experience" and "direct-to-consumer sales." A contractor wants to hear about "leads" and "estimates." Match their vocabulary.</em>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <div>
+              <strong>Limit personalization to one or two sentences.</strong>
+              <em>Spend 3–5 minutes personalizing. More than that and the ROI drops. Get the name, one specific detail, and send.</em>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <div>
+              <strong>Send from a real email address, not a catch-all.</strong>
+              <em>yourname@alderandash.com will always outperform hello@ or info@ in open rates and trust.</em>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <div>
+              <strong>Time your sends: Tue–Thu, 8–10am or 1–3pm.</strong>
+              <em>Avoid Monday mornings and Friday afternoons. Local business owners often check email on their phone between tasks.</em>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════
+         BUSINESSES TO TARGET FIRST
+    ════════════════════════════════ -->
+    <div class="info-section fade-up">
+      <div class="section-label">Target List</div>
+      <div class="info-card">
+        <h2>High-Value Hudson Valley Verticals</h2>
+        <p>Ranked by likelihood to have bad websites, budget to fix them, and frequency of online research before purchase.</p>
+        <div class="biz-grid">
+
+          <div class="biz-card">
+            <div class="biz-name">Bed &amp; Breakfasts / Inns</div>
+            <div class="biz-pain">Competing with Airbnb; depend on direct bookings; often running decade-old sites with no SSL or mobile support.</div>
+            <div class="biz-templates"><span class="t-tag">Audit Offer</span><span class="t-tag">Redesign Preview</span></div>
+          </div>
+
+          <div class="biz-card">
+            <div class="biz-name">Restaurants &amp; Cafés</div>
+            <div class="biz-pain">PDF menus, slow sites, Google listing inconsistencies, no online ordering or reservation links.</div>
+            <div class="biz-templates"><span class="t-tag">Audit Offer</span><span class="t-tag">AI Angle</span></div>
+          </div>
+
+          <div class="biz-card">
+            <div class="biz-name">Wineries &amp; Distilleries</div>
+            <div class="biz-pain">High-intent buyers doing research before visiting; need event pages, tasting room info, and online shop.</div>
+            <div class="biz-templates"><span class="t-tag">Redesign Preview</span><span class="t-tag">AI Angle</span></div>
+          </div>
+
+          <div class="biz-card">
+            <div class="biz-name">Home Service Contractors</div>
+            <div class="biz-pain">Zero web presence or a site built in 2015; rely on word of mouth; losing to competitors who rank on Google.</div>
+            <div class="biz-templates"><span class="t-tag">Audit Offer</span><span class="t-tag">AI Angle</span></div>
+          </div>
+
+          <div class="biz-card">
+            <div class="biz-name">Salons &amp; Spas</div>
+            <div class="biz-pain">Instagram-first with no real booking site; customers calling instead of self-scheduling; no after-hours capture.</div>
+            <div class="biz-templates"><span class="t-tag">Redesign Preview</span><span class="t-tag">AI Angle</span></div>
+          </div>
+
+          <div class="biz-card">
+            <div class="biz-name">Yoga &amp; Fitness Studios</div>
+            <div class="biz-pain">Outdated class schedules, no online sign-up, losing prospective members to studios with better digital presence.</div>
+            <div class="biz-templates"><span class="t-tag">Audit Offer</span><span class="t-tag">Redesign Preview</span></div>
+          </div>
+
+          <div class="biz-card">
+            <div class="biz-name">Healthcare &amp; Wellness</div>
+            <div class="biz-pain">Patients can't find hours or book online; no HIPAA-safe contact form; after-hours inquiries go unanswered.</div>
+            <div class="biz-templates"><span class="t-tag">AI Angle</span><span class="t-tag">Audit Offer</span></div>
+          </div>
+
+          <div class="biz-card">
+            <div class="biz-name">Boutique Retail &amp; Antiques</div>
+            <div class="biz-pain">No e-commerce; site (if it exists) is a single page; competing with Etsy and Amazon without leveraging local charm.</div>
+            <div class="biz-templates"><span class="t-tag">Audit Offer</span><span class="t-tag">Redesign Preview</span></div>
+          </div>
+
+          <div class="biz-card">
+            <div class="biz-name">Event Venues &amp; Farms</div>
+            <div class="biz-pain">Weddings and events are high-ticket; couples research obsessively; poor photo galleries and inquiry forms lose bookings.</div>
+            <div class="biz-templates"><span class="t-tag">Redesign Preview</span><span class="t-tag">AI Angle</span></div>
+          </div>
+
+          <div class="biz-card">
+            <div class="biz-name">Real Estate Agents</div>
+            <div class="biz-pain">Using generic brokerage template sites; no personal brand; after-hours lead capture is a huge differentiator.</div>
+            <div class="biz-templates"><span class="t-tag">AI Angle</span><span class="t-tag">Referral</span></div>
+          </div>
+
+          <div class="biz-card">
+            <div class="biz-name">Landscapers &amp; Lawn Care</div>
+            <div class="biz-pain">Peak season inquiries pile up; no online quote form; losing to bigger companies with better sites and automated follow-up.</div>
+            <div class="biz-templates"><span class="t-tag">AI Angle</span><span class="t-tag">Audit Offer</span></div>
+          </div>
+
+          <div class="biz-card">
+            <div class="biz-name">Pet Services</div>
+            <div class="biz-pain">Groomers, vets, and doggy daycares rely on repeat bookings; automated reminders and online scheduling are huge wins.</div>
+            <div class="biz-templates"><span class="t-tag">AI Angle</span><span class="t-tag">Audit Offer</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:.75rem; color:var(--text-dim); text-align:center; padding-bottom:20px;">
+      Alder &amp; Ash Digital &nbsp;·&nbsp; Hudson Valley, NY &nbsp;·&nbsp; Internal Use &nbsp;·&nbsp; Updated March 2026
+      <br><span style="font-size:.7rem;">Update P.S. social proof lines as client results come in</span>
+    </p>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo" style="margin-bottom:0;">
+          <div class="nav-logo-mark">A&A</div>
+          <span class="nav-logo-text">Alder &amp; Ash <span>Digital</span></span>
+        </a>
+        <p class="footer-brand-desc">AI-powered websites and automation for local service businesses in the Hudson Valley. Built to convert, not just look pretty.</p>
+        <a href="index.html#contact" class="btn btn-primary btn-sm">Get a Free Audit →</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="index.html#services">Website Design</a></li>
+          <li><a href="index.html#services">AI Visibility Audit</a></li>
+          <li><a href="index.html#services">AI Search Optimization</a></li>
+          <li><a href="index.html#services">Monitoring &amp; Retainers</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="portfolio.html">Our Work</a></li>
+          <li><a href="index.html#about">About Liam</a></li>
+          <li><a href="blog.html">Blog &amp; Resources</a></li>
+          <li><a href="outreach-templates.html">Outreach Templates</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Serving</div>
+        <ul class="footer-links">
+          <li><a href="index.html#contact">Kingston, NY</a></li>
+          <li><a href="index.html#contact">Woodstock, NY</a></li>
+          <li><a href="index.html#contact">New Paltz, NY</a></li>
+          <li><a href="index.html#contact">Hudson Valley &amp; Beyond</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Alder &amp; Ash Digital. All rights reserved.</div>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+  const dot = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  let mouseX = window.innerWidth/2, mouseY = window.innerHeight/2;
+  let ringX = mouseX, ringY = mouseY;
+  const LERP = 0.12;
+  document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+  const hoverTargets = 'a, button, .btn, .template-card, .biz-card';
+  document.addEventListener('mouseover', e => { if(e.target.closest(hoverTargets)){dot.classList.add('hovering');ring.classList.add('hovering');} });
+  document.addEventListener('mouseout',  e => { if(e.target.closest(hoverTargets)){dot.classList.remove('hovering');ring.classList.remove('hovering');} });
+  function animateCursor() {
+    dot.style.left = mouseX+'px'; dot.style.top = mouseY+'px';
+    ringX += (mouseX-ringX)*LERP; ringY += (mouseY-ringY)*LERP;
+    ring.style.left = ringX+'px'; ring.style.top = ringY+'px';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive:true });
+  const hamburger = document.getElementById('nav-hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  let menuOpen = false;
+  function toggleMenu() {
+    menuOpen = !menuOpen;
+    hamburger.classList.toggle('open', menuOpen);
+    mobileNav.classList.toggle('open', menuOpen);
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+  }
+  hamburger.addEventListener('click', toggleMenu);
+  mobileNav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { if(menuOpen) toggleMenu(); }));
+  const fadeObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target);} });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
+})();
+</script>
+
+</body>
+</html>

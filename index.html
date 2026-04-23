@@ -40,7 +40,7 @@
     "name": "Alder & Ash Digital",
     "description": "Hudson Valley AI automation agency helping local service businesses automate backend operations — customer follow-ups, scheduling, invoicing, lead management, and more. Serving Kingston, Woodstock, New Paltz, Rhinebeck, Saugerties, Beacon, Hudson, and throughout Ulster County, Dutchess County, and the Catskills.",
     "url": "https://alderandashdigital.com",
-    "email": "hello@alderandashdigital.com",
+    "email": "Liam@alderandashdigital.com",
     "telephone": "+18455324209",
     "image": "https://alderandashdigital.com/og-image.jpg",
     "address": {
@@ -84,7 +84,7 @@
     "name": "Alder & Ash Digital",
     "url": "https://alderandashdigital.com",
     "logo": "https://alderandashdigital.com/og-image.jpg",
-    "email": "hello@alderandashdigital.com",
+    "email": "Liam@alderandashdigital.com",
     "foundingDate": "2026",
     "founder": {
       "@type": "Person",
@@ -2673,9 +2673,12 @@
         </ul>
         <div style="padding: 24px 28px; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg);">
           <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:8px; font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Or reach out directly</p>
-          <a href="mailto:hello@alderandashdigital.com" style="font-size:1rem; font-weight:600; color:var(--green-bright); text-decoration:none;">hello@alderandashdigital.com</a>
+          <a href="mailto:Liam@alderandashdigital.com" style="font-size:1rem; font-weight:600; color:var(--green-bright); text-decoration:none;">Liam@alderandashdigital.com</a>
           <br style="margin-bottom:6px;">
           <a href="tel:+18455324209" style="font-size:1rem; font-weight:600; color:var(--green-bright); text-decoration:none;">(845) 532-4209</a>
+          <br style="margin-bottom:6px;">
+          <!-- TODO: Replace # with your Calendly or scheduling link, e.g. https://calendly.com/liam-alderandash -->
+          <a href="https://calendly.com/liam-alderandash/30min" style="font-size:1rem; font-weight:600; color:var(--green-bright); text-decoration:none;"><i class="fa-solid fa-calendar-check" style="margin-right:6px;"></i>Book a Free Call</a>
         </div>
       </div>
 
@@ -2740,7 +2743,7 @@
           <span class="nav-logo-text">Alder &amp; Ash <span>Digital</span></span>
         </a>
         <p class="footer-brand-desc">AI automation, AI-ready web design, and search visibility for local service businesses in the Hudson Valley. Less busywork, more craft.</p>
-        <p style="margin:8px 0 12px;"><a href="mailto:hello@alderandashdigital.com" style="color:var(--green-bright); text-decoration:none; font-weight:500;">hello@alderandashdigital.com</a><br><a href="tel:+18455324209" style="color:var(--green-bright); text-decoration:none; font-weight:500;">(845) 532-4209</a></p>
+        <p style="margin:8px 0 12px;"><a href="mailto:Liam@alderandashdigital.com" style="color:var(--green-bright); text-decoration:none; font-weight:500;">Liam@alderandashdigital.com</a><br><a href="tel:+18455324209" style="color:var(--green-bright); text-decoration:none; font-weight:500;">(845) 532-4209</a></p>
         <a href="#contact" class="btn btn-primary btn-sm magnetic">Free AI Workflow Audit →</a>
       </div>
       <div>
@@ -3133,7 +3136,12 @@
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const action = form.getAttribute('action');
-    // If Formspree ID has been configured, use fetch; else show success immediately
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const origText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    let sent = false;
     if (action && !action.includes('YOUR_FORM_ID')) {
       try {
         const data = new FormData(form);
@@ -3143,8 +3151,24 @@
           headers: { 'Accept': 'application/json' }
         });
         if (!resp.ok) throw new Error('Network error');
+        sent = true;
       } catch(err) {
-        // Silent fail — still show success to user
+        // Formspree failed — build mailto fallback
+        const fd = new FormData(form);
+        const body = Array.from(fd.entries()).map(([k,v]) => `${k}: ${v}`).join('%0A');
+        const mailto = `mailto:Liam@alderandashdigital.com?subject=${encodeURIComponent('Website Inquiry – ' + (fd.get('business') || 'New Lead'))}&body=${body}`;
+        submitBtn.textContent = origText;
+        submitBtn.disabled = false;
+        // Show inline error with mailto fallback
+        let errEl = document.getElementById('form-error');
+        if (!errEl) {
+          errEl = document.createElement('div');
+          errEl.id = 'form-error';
+          errEl.style.cssText = 'margin-top:16px;padding:16px 20px;background:rgba(255,80,80,0.08);border:1px solid rgba(255,80,80,0.25);border-radius:12px;color:var(--text);font-size:0.92rem;line-height:1.6;';
+          form.appendChild(errEl);
+        }
+        errEl.innerHTML = `Something went wrong sending your message. You can <a href="${mailto}" style="color:var(--green-bright);font-weight:600;text-decoration:underline;">email us directly</a> or call <a href="tel:+18455324209" style="color:var(--green-bright);font-weight:600;text-decoration:underline;">(845) 532-4209</a>.`;
+        return;
       }
     }
     form.style.display = 'none';
